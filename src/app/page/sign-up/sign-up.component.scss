@@ -1,0 +1,159 @@
+@import '../../../theme/variables.scss';
+
+header {
+    .header-container {
+        padding: 4rem 1.5rem 2rem 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .sign-up-title {
+        flex: 1;
+        text-align: center;
+
+        span {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 29px;
+            color: $text-dark-primary;
+        }
+    }
+}
+
+section {
+    padding: 0 1.5rem 0 1.5rem;
+    color: $text-dark-primary;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .alert-msg {
+            height: 15px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            input {
+                padding: 1rem;
+                border: 2px solid $primary-medium-color;
+                border-radius: 10rem;
+            }
+
+            div {
+                color: $primary-medium-color;
+                margin-top: -5px;
+            }
+
+        }
+
+
+    }
+
+    .password {
+        position: relative;
+
+        .hideShowPass {
+            position: absolute;
+            right: 7%;
+            top: 50%;
+        }
+    }
+}
+
+.enter-password {
+    // position: relative;
+
+    .nextButtonPostion {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 10%;
+    }
+
+    .pass-length {
+        display: flex;
+        flex-direction: row;
+        color: rgba(121, 122, 126, 1);
+
+        .length-Check {
+            width: fit-content;
+            border: 1px solid $primary-medium-color;
+            border-radius: 15rem;
+            padding: 12px 20px;
+        }
+    }
+
+    .password-strength {
+        span {
+            height: 15px;
+            margin-bottom: 15px;;
+        
+        }
+
+        margin-bottom: 1rem;
+    }
+
+    .progress {
+        height: 5px;
+    }
+
+    .progress-bar {
+        background-color: $primary-medium-color;
+    }
+}
+
+
+.nextButton {
+    background-color: $primary-dark-color;
+    color: $white;
+    padding: 1rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s;
+    width: 85vw;
+    // width: 100%;
+
+
+
+    span {
+        flex: 1;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 23px;
+        letter-spacing: 0px;
+        text-align: center;
+        padding: 0;
+    }
+
+}
+
+.nextButton:active {
+    animation: nextClicked 0.5s;
+}
+
+@keyframes nextClicked {
+    0% {
+        background-color: $primary-medium-color;
+        transform: scale(1);
+    }
+
+    50% {
+        background-color: $primary-medium-color;
+        transform: scale(1.1);
+    }
+
+    100% {
+        background-color: $primary-medium-color;
+        transform: scale(1);
+    }
+}

@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.login-title {
+.signIN-title {
     flex: 1;
     text-align: center;
 
@@ -47,13 +47,18 @@ section {
     }
 
     .forgot-pass {
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0px;
-        text-align: right;
-        padding-top: 10px;
-        color: $primary-medium-color;
+        display: flex;
+        justify-content: end;
+
+        button {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0px;
+            text-align: right;
+            padding-top: 10px;
+            color: $primary-medium-color;
+        }
     }
 
     .enter-pass {
@@ -122,4 +127,70 @@ section {
         background-color: $primary-medium-color;
         transform: scale(1);
     }
+}
+
+.forgot-section,
+.email-verification-section,
+.otp-section,
+.reset-password {
+    color: $primary-medium-color;
+
+    .forgot,
+    .OTP {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-OTP {
+        display: flex;
+        justify-content: space-evenly;
+
+        .enterOTP {
+            font-size: 24px;
+            width: 4rem;
+            height: 3rem;
+            padding: 0;
+            text-align: center;
+        }
+    }
+
+}
+
+.reset-password {
+    color: $text-dark-primary;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+
+    .new-password {
+        color: $primary-medium-color;
+    }
+
+    .pass-not-strong {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: rgba(255, 0, 0, 1);
+        margin-top: 5px;
+    }
+}
+
+.nextButtonPostion {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 10%;
+}
+
+.password-updated-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: $overlay-primary;
+    position: absolute;
+    top: 0;
+    right: 0;
 }

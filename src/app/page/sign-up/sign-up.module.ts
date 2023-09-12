@@ -8,7 +8,7 @@ import { SignUpPageRoutingModule } from './sign-up-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    SignUpPageRoutingModule
+    SignUpPageRoutingModule,
   ]
 })
 export class SignUpModule { }
