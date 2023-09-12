@@ -193,4 +193,52 @@ section {
     position: absolute;
     top: 0;
     right: 0;
+    justify-content: center;
+    align-items: center;
+
+    .key-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pop-up-header {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .password-updated-pop-up {
+        background-color: $white;
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    .pop-up-title {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .pop-up-span {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .done-btn {
+        background-color: $primary-dark-color;
+        color: $white;
+        padding: 1rem;
+        border-radius: 10rem;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.5s;
+        width: 100%;
+    }
+
 }
