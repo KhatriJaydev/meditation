@@ -17,7 +17,7 @@ export class LaunchScreenComponent {
   fourthScreen: boolean = false;
   step = 2;
   constructor(private router: Router) {
-    this.step = 2;
+    this.step = 5;
 
     this.logoSVG = true;
     setTimeout(() => {
