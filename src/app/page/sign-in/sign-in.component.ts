@@ -21,10 +21,10 @@ export class SignInComponent {
   password: string;
   show = false;
 
-  loginModel = false;
+  loginModel = true;
   forgotPassModel = false;
   emailVerificationModel = false;
-  resetPasswordModel = true;
+  resetPasswordModel = false;
   passwordUpdated = false;
 
   constructor(public router: Router, private formbuilder: FormBuilder) {
@@ -55,7 +55,7 @@ export class SignInComponent {
     this.loginModel = false;
     this.emailVerificationModel = false;
   }
-  
+
   recoverPass() {
     this.forgotPassModel = false;
     this.loginModel = false;

@@ -43,7 +43,7 @@ textarea {
 
 
 .nextButton {
-    background-color: $primary-dark-color;
+    background-color: $charcoal-gray;
     color: $white;
     padding: 1rem;
     border-radius: 10rem;
@@ -73,17 +73,17 @@ textarea {
 
 @keyframes nextClicked {
     0% {
-        background-color: $primary-medium-color;
+        background-color: $steel-gray;
         transform: scale(1);
     }
 
     50% {
-        background-color: $primary-medium-color;
+        background-color: $steel-gray;
         transform: scale(1.1);
     }
 
     100% {
-        background-color: $primary-medium-color;
+        background-color: $steel-gray;
         transform: scale(1);
     }
 }

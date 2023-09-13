@@ -47,6 +47,6 @@ export class LaunchScreenComponent {
   }
 
   signUp() {
-    this.router.navigate(['sign-in']);
+    this.router.navigate(['sign-up']);
   }
 }

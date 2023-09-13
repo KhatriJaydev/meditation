@@ -139,11 +139,7 @@
         <div class="enter-otp-title">Please enter the 4 digit code that send to your email address.</div>
         <form [formGroup]="forgotPassForm" novalidate>
             <div class="OTP">
-                <div class="input-OTP" [ngClass]="{
-       'invalid': forgotPassForm?.get('enterOTP')?.
-       invalid && (forgotPassForm.get('enterOTP')?.dirty
-        || forgotPassForm.get('enterOTP')?.touched)
-     }">
+                <div>
                     <input class="enterOTP" formControlName="enterOTP" maxlength="1" type="text">
                     <input class="enterOTP" formControlName="enterOTP" maxlength="1" type="text">
                     <input class="enterOTP" formControlName="enterOTP" maxlength="1" type="text">
