@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { JobStressComponent } from './page/job-stress/job-stress.component';
 import { RecommendedDetailComponent } from './page/recommended-detail/recommended-detail.component';
 import { FilterComponent } from './page/filter/filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FilterComponent } from './page/filter/filter.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
