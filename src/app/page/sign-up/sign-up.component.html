@@ -1,7 +1,7 @@
 <ng-container *ngIf="showEnterEmailModel">
   <header>
     <div class="header-container">
-      <button (click)="goToSignIN()" class="back-button-icon">
+      <button type="button" (click)="goToSignIN()" class="back-button-icon">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect opacity="0.01" width="28" height="28" fill="white" />
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -49,7 +49,7 @@
         </div>
       </div>
     </form>
-    <button class="nextButton" (click)="goToenterPass()">
+    <button type="button" class="nextButton" (click)="goToenterPass()">
       <span>Continue</span>
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect opacity="0.01" x="1" y="1" width="26" height="26" fill="white" stroke="white" stroke-width="2" />
@@ -63,7 +63,7 @@
 <ng-container *ngIf="showEnterPassModel">
   <header>
     <div class="header-container">
-      <button (click)="backToEnterEmail()" class="back-button-icon">
+      <button type="button" (click)="backToEnterEmail()" class="back-button-icon">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect opacity="0.01" width="28" height="28" fill="white" />
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -84,7 +84,7 @@
         <span>Password</span>
         <!-- <input formControlName="password" [type]="password"> -->
         <input formControlName="password" [type]="password" (input)="onPasswordChange()">
-        <button class="hideShowPass" (click)="hideShowPass()">
+        <button type="button" class="hideShowPass" (click)="hideShowPass()">
           <span *ngIf="!show">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect opacity="0.01" width="28" height="28" fill="white" />

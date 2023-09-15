@@ -30,6 +30,13 @@ strong {
     padding: 0;
 }
 
+li,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 button,
 input,
 optgroup,
@@ -86,4 +93,15 @@ textarea {
         background-color: $steel-gray;
         transform: scale(1);
     }
+}
+
+.app-main {
+    position: relative;
+}
+
+app-tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

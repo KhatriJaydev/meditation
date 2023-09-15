@@ -76,5 +76,7 @@ export class SignInComponent {
     this.emailVerificationModel = false;
     this.resetPasswordModel = false;
   }
-  userLogin() {}
+  userLogin() {
+    this.router.navigate(['/home-screen-main']);
+  }
 }

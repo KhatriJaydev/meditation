@@ -10,7 +10,7 @@
     <div *ngIf="!logoSVG">
         <section class="second-screen fadeIn" *ngIf="step === 2">
             <div class="d-flex justify-content-end skip-div">
-                <button class="btn-skip" (click)="skipScreen()">Skip</button>
+                <button type="button" class="btn-skip" (click)="skipScreen()">Skip</button>
             </div>
             <div class="d-flex flex-column gap-5">
                 <div class="screen-banner">
@@ -36,7 +36,7 @@
         </section>
         <section class="third-screen fadeIn" *ngIf="step === 3">
             <div class="d-flex justify-content-start skip-div">
-                <button class="back-screen" (click)="backScreen()">
+                <button type="button" class="back-screen" (click)="backScreen()">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect opacity="0.01" width="28" height="28" fill="white" />
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -69,7 +69,7 @@
         </section>
         <section class="fourth-screen fadeIn" *ngIf="step === 4">
             <div class="d-flex justify-content-start skip-div">
-                <button class="back-screen" (click)="backScreen()">
+                <button type="button" class="back-screen" (click)="backScreen()">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect opacity="0.01" width="28" height="28" fill="white" />
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -102,7 +102,7 @@
         </section>
         <section class="fifth-screen fadeIn" *ngIf="step === 5">
             <div class="d-flex justify-content-start skip-div">
-                <button class="back-screen" (click)="backScreen()">
+                <button type="button" class="back-screen" (click)="backScreen()">
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect opacity="0.01" width="28" height="28" fill="white" />
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -118,7 +118,7 @@
                 <h3 class="text-center text-title">Welcome to</h3>
                 <p class="text-center text_title-span">Fat loss stressed and more mindful with meditation</p>
                 <div class="d-flex justify-content-center align-items-center flex-column gap-3">
-                    <button class="logIN" (click)="signIn()">
+                    <button type="button" class="logIN" (click)="signIn()">
                         <svg width="327" height="55" viewBox="0 0 327 55" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect width="327" height="55" rx="27.5" fill="#3A3B3B" />
@@ -132,7 +132,7 @@
                                 fill="#F7FAFC" />
                         </svg>
                     </button>
-                    <button class="signUP" (click)="signUp()">
+                    <button type="button"class="signUP" (click)="signUp()">
                         <svg width="327" height="55" viewBox="0 0 327 55" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect width="327" height="55" rx="27.5" fill="#3A3B3B" />

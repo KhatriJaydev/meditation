@@ -1,5 +1,11 @@
+import { HomeScreenMainComponent } from './page/home-screen-main/home-screen-main.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProfileComponent } from './page/profile/profile.component';
+import { ExploreComponent } from './page/explore/explore.component';
+import { JobStressComponent } from './page/job-stress/job-stress.component';
+import { RecommendedDetailComponent } from './page/recommended-detail/recommended-detail.component';
+import { FilterComponent } from './page/filter/filter.component';
 
 const routes: Routes = [
   {
@@ -16,6 +22,30 @@ const routes: Routes = [
     path: 'sign-up',
     loadChildren: () =>
       import('./page/sign-up/sign-up.module').then((m) => m.SignUpModule),
+  },
+  {
+    path: 'home-screen-main',
+    component: HomeScreenMainComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
+  {
+    path: 'explor',
+    component: ExploreComponent,
+  },
+  {
+    path: 'job-stress',
+    component: JobStressComponent,
+  },
+  {
+    path: 'recommended-detail/:problemType',
+    component: RecommendedDetailComponent,
+  },
+  {
+    path: 'filter',
+    component: FilterComponent,
   },
 ];
 
