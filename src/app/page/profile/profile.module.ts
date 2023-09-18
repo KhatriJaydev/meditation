@@ -5,15 +5,16 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
 import { TotalMeditationComponent } from './total-meditation/total-meditation.component';
 import { LongestSessionComponent } from './longest-session/longest-session.component';
-// import { SettingsComponent } from './settings/settings.component';
+import { TabsComponent } from '../tabs/tabs.component';
+import { ShowAchievementsComponent } from './show-achievements/show-achievements.component';
 
 @NgModule({
   declarations: [
     ProfileComponent,
     TotalMeditationComponent,
     LongestSessionComponent,
-    // SettingsComponent,
+    ShowAchievementsComponent,
   ],
-  imports: [CommonModule, ProfileRoutingModule],
+  imports: [CommonModule, ProfileRoutingModule, TabsComponent],
 })
 export class ProfileModule {}

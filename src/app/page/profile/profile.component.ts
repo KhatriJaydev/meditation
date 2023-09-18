@@ -7,15 +7,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent {
+  achievementsList = ['Stress Decrease', 'Focus Master', 'Consistent Schedule'];
+
+  isAchievementAvailable = true;
+
   constructor(private router: Router) {}
+
   goToSettings() {
     this.router.navigate(['profile', 'settings']);
   }
+
   showProgress(progress: string) {
     if (progress === 'totalMeditation') {
       this.router.navigate(['profile', 'total-meditation']);
     } else if (progress === 'longestSession') {
       this.router.navigate(['profile', 'longest-session']);
     }
+  }
+
+  showAchievements(achievementsName: string) {
+    this.router.navigate(['profile', 'show-achievements', achievementsName]);
+  }
+  ngOnInit(): void {
+    // this.isAchievementAvailable = false;
   }
 }

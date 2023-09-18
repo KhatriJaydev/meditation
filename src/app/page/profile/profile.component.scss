@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    overflow-y: scroll;
+    padding-bottom: 6rem;
 
     header {
         padding: 64px 12px 0px 12px;
@@ -27,6 +29,41 @@
     flex-direction: column;
     row-gap: 30px;
 
+    .user-profile-section {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .user-avatar {
+            width: 68px;
+            height: 68px;
+            border: 4px solid $charcoal-gray;
+            padding: 6px;
+            border-radius: 50%;
+            border-width: 0px 4px 4px 0px;
+
+        }
+
+        .user-name {
+            text-align: left;
+            color: $text-dark;
+            letter-spacing: 0px;
+
+            h6 {
+                font-size: 19px;
+                font-weight: 700;
+                line-height: 25px;
+
+            }
+
+            p {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 17px;
+            }
+        }
+    }
+
     .progress-section {
 
         .progress-cards {
@@ -46,9 +83,13 @@
         .progress-card {
             flex: 1;
             background: $mint-green;
-            padding: 16px 28px;
+            // padding: 16px 28px;
             border-radius: 22px;
-            width: 152px;
+            // width: 152px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             height: 152px;
 
 
@@ -85,6 +126,93 @@
 
         .progress-card-two {
             background: $ivory;
+        }
+    }
+
+    .achieved-card {
+        display: flex;
+        gap: 30px;
+        background: $charcoal-gray;
+        padding: 24px 16px;
+        border-radius: 22px;
+        color: $white;
+
+        .achieved-title {
+            h6 {
+                font-size: 17px;
+                font-weight: 600;
+                line-height: 23px;
+                letter-spacing: 0px;
+                text-align: left;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 17px;
+                letter-spacing: 0px;
+                text-align: left;
+
+            }
+        }
+    }
+
+    .achievements-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .achievements-trophy {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            border: 2px solid $mint-green;
+            border-radius: 22px;
+
+            .achievements-text {
+                flex: 1;
+            }
+
+            .achievements-img {
+                flex: 1;
+            }
+        }
+
+        .achievements-title {
+            font-size: 19px;
+            font-weight: 600;
+            line-height: 25px;
+            letter-spacing: 0px;
+            text-align: left;
+
+        }
+
+        .list-of-achievements {
+            ul {
+                display: flex;
+                gap: 20px;
+                flex-direction: column;
+
+                li {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    .achievements-center {
+                        text-align: left;
+                        flex: 1;
+
+                        .achievements-title {
+                            font-size: 17px;
+                            font-weight: 700;
+                            line-height: 23px;
+                            letter-spacing: 0px;
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
