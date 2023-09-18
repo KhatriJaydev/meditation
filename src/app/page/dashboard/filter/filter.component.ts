@@ -57,7 +57,7 @@ export class FilterComponent {
     this.router.navigate(['tabs/dashboard']);
   }
   ngOnInit(): void {
-    this.isFilterOpen = true;
-    this.filterTitle = 'Duration';
+    // this.isFilterOpen = true;
+    // this.filterTitle = 'Duration';
   }
 }
