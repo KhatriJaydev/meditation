@@ -1,7 +1,6 @@
 import { HomeScreenMainComponent } from './page/home-screen-main/home-screen-main.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfileComponent } from './page/profile/profile.component';
 import { ExploreComponent } from './page/explore/explore.component';
 import { JobStressComponent } from './page/job-stress/job-stress.component';
 import { RecommendedDetailComponent } from './page/recommended-detail/recommended-detail.component';
@@ -29,7 +28,8 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent,
+    loadChildren: () =>
+      import('./page/profile/profile.module').then((m) => m.ProfileModule),
   },
   {
     path: 'explor',
