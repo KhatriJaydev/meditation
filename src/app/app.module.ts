@@ -5,16 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.page';
-import { LaunchScreenComponent } from './page/launch-screen/launch-screen.component';
-import { AddIconComponent } from './page/add-icon/add-icon.component';
+import { AddIconComponent } from './home/add-icon/add-icon.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    LaunchScreenComponent,
-    AddIconComponent,
-  ],
+  declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

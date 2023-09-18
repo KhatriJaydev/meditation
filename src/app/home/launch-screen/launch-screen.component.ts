@@ -5,8 +5,6 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-launch-screen',
-  // standalone: true,
-  // imports: [CommonModule, AddIconComponent],
   templateUrl: './launch-screen.component.html',
   styleUrls: ['./launch-screen.component.scss'],
 })
