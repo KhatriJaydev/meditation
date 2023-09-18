@@ -107,3 +107,16 @@ textarea {
 //     left: 0;
 //     right: 0;
 // }
+.tab-bar-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 0px 8px 0px rgba(58, 59, 59, 0.16);
+    background: $white;
+    z-index: 1000;
+    padding: 28px 0;
+}
