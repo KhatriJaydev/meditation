@@ -41,4 +41,7 @@ export class SettingsComponent {
   personaldetails() {
     this.router.navigate(['/profile/settings/personal-details']);
   }
+  goBack() {
+    this.router.navigate(['tabs', 'profile']);
+  }
 }

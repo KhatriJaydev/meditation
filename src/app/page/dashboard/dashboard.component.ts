@@ -4,27 +4,29 @@ import { TabsComponent } from '../tabs/tabs.component';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home-screen-main',
-  standalone: true,
-  imports: [CommonModule, TabsComponent],
-  templateUrl: './home-screen-main.component.html',
-  styleUrls: ['./home-screen-main.component.scss'],
+  selector: 'app-dashboard',
+  // standalone: true,
+  // imports: [CommonModule, TabsComponent],
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
 })
-export class HomeScreenMainComponent {
+export class DashboardComponent {
   constructor(private router: Router) {}
+
   openCategories(typeOFcategories: string) {
     if (typeOFcategories === 'jobStress') {
-      this.router.navigate(['/job-stress']);
+      this.router.navigate(['dashboard', 'job-strees']);
     }
   }
+
   showRecommendedDetail(RecommendedDetail: string) {
     if (RecommendedDetail === 'AnxietyProblems') {
-      this.router.navigate(['/recommended-detail/AnxietyProblems']);
+      this.router.navigate(['dashboard/recommended-detail/AnxietyProblems']);
     } else if (RecommendedDetail === 'SleepBetter') {
-      this.router.navigate(['/recommended-detail/SleepBetter']);
+      this.router.navigate(['dashboard/recommended-detail/SleepBetter']);
     }
   }
-  openFilter(){
-    this.router.navigate(['/filter']);
+  openFilter() {
+    this.router.navigate(['dashboard', 'filter']);
   }
 }

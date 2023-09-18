@@ -69,7 +69,7 @@ export class RecommendedDetailComponent {
   }
 
   goBack() {
-    this.router.navigate(['/home-screen-main']);
+    this.router.navigate(['tabs/dashboard']);
   }
 
   ngOnInit() {

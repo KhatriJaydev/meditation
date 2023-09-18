@@ -15,6 +15,6 @@ import { ShowAchievementsComponent } from './show-achievements/show-achievements
     LongestSessionComponent,
     ShowAchievementsComponent,
   ],
-  imports: [CommonModule, ProfileRoutingModule, TabsComponent],
+  imports: [CommonModule, ProfileRoutingModule],
 })
 export class ProfileModule {}

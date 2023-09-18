@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent {
-  constructor(private router: Router){}
+  constructor(private router: Router) {}
   isFilterOpen = false;
   filterTitle: String = '';
   selectedGoal: number | null = null;
@@ -54,7 +54,7 @@ export class FilterComponent {
     }
   }
   goBack() {
-    this.router.navigate(['/home-screen-main']);
+    this.router.navigate(['tabs/dashboard']);
   }
   ngOnInit(): void {
     this.isFilterOpen = true;

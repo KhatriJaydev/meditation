@@ -1,17 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import {
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss'],
 })
@@ -77,6 +69,6 @@ export class SignInComponent {
     this.resetPasswordModel = false;
   }
   userLogin() {
-    this.router.navigate(['/home-screen-main']);
+    this.router.navigate(['tabs', 'dashboard']);
   }
 }

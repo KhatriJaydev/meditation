@@ -29,7 +29,7 @@ export class ShowAchievementsComponent {
     console.log('Shared Achievement:', selectedAchievement);
   }
   goBack() {
-    this.router.navigate(['profile']);
+    this.router.navigate(['tabs', 'profile']);
   }
 
   ngOnInit() {

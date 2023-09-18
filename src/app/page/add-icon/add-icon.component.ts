@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Platform } from '@angular/cdk/platform';
-import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
-import { filter, map } from 'rxjs';
 
 @Component({
   selector: 'app-add-icon',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './add-icon.component.html',
   styleUrls: ['./add-icon.component.scss'],
 })

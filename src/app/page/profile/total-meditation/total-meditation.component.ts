@@ -10,7 +10,7 @@ export class TotalMeditationComponent {
   constructor(private router: Router) {}
 
   goBack() {
-    this.router.navigate(['profile']);
+    this.router.navigate(['tabs', 'profile']);
   }
   
 }
