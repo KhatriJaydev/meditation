@@ -116,11 +116,12 @@
 
     .filter-content {
         padding: 0 12px;
-
+        height: 100%;
         .filter-goal {
             display: flex;
+            height: 100%;
             flex-direction: column;
-            gap: 15rem;
+            justify-content: space-between;
         }
 
         .goal-data {
@@ -196,7 +197,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
-
+        margin-bottom: 64px;
         button {
             background-color: $charcoal-gray;
             color: $white;
