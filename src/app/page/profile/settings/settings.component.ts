@@ -38,8 +38,16 @@ export class SettingsComponent {
       settingTitle: 'Logout',
     },
   ];
-  personaldetails() {
-    this.router.navigate(['/profile/settings/personal-details']);
+  personaldetails(settingTitle: string) {
+    const setting = this.settingsItems.find(
+      (item) => item.settingTitle === settingTitle
+    );
+    if (setting) {
+      const path = `/profile/settings/${setting.settingTitle
+        .toLowerCase()
+        .replace(' ', '-')}`;
+      this.router.navigate([path]);
+    }
   }
   goBack() {
     this.router.navigate(['tabs', 'profile']);

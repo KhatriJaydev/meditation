@@ -1,1 +1,91 @@
-<p>personal-details works!</p>
+<div class="container main-container">
+    <div class="upper-section">
+        <header>
+            <button class="go-back" (click)="goBack()">
+                <img src="../../../../../assets/icons/Go-back.svg" class="img-fluid">
+                <span>Personal Details</span>
+            </button>
+        </header>
+        <section class="content">
+            <div class="user-avatar">
+                <div class="d-flex flex-column align-items-center">
+                    <svg width="81" height="80" viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40.5" cy="40" r="40" fill="#3A3B3B" />
+                        <path
+                            d="M35.9773 38.9104C34.0577 37.5105 32.8077 35.2448 32.8077 32.6923C32.8077 28.4508 36.2584 25 40.5 25C44.7415 25 48.1923 28.4508 48.1923 32.6923C48.1923 35.2448 46.9423 37.5105 45.0227 38.9104C49.7945 40.7365 53.1923 45.3631 53.1923 50.7692C53.1923 53.1021 51.2944 55 48.9615 55H32.0385C29.7056 55 27.8077 53.1021 27.8077 50.7692C27.8077 45.3631 31.2054 40.7365 35.9773 38.9104ZM45.8846 32.6923C45.8846 29.7232 43.469 27.3077 40.5 27.3077C37.5309 27.3077 35.1154 29.7232 35.1154 32.6923C35.1154 35.6614 37.5309 38.077 40.5 38.077C43.469 38.077 45.8846 35.6614 45.8846 32.6923ZM32.0385 52.6923H48.9615C50.0219 52.6923 50.8845 51.8296 50.8845 50.7692C50.8845 45.043 46.2261 40.3846 40.4999 40.3846C34.7737 40.3846 30.1153 45.043 30.1153 50.7692C30.1153 51.8296 30.978 52.6923 32.0385 52.6923Z"
+                            fill="white" />
+                    </svg>
+                    <p>
+                        Change Your Profile Image
+                    </p>
+                </div>
+            </div>
+            <div class="form-personal">
+                <form [formGroup]="signUpForm" novalidate>
+                    <div class="Fname">
+                        <span>First name</span>
+                        <input formControlName="Fname">
+                        <div class="alert-msg">
+                            <div
+                                *ngIf="signUpForm.controls['Fname'].invalid && (signUpForm.controls['Fname'].dirty || signUpForm.controls['Fname'].touched)">
+                                <span *ngIf="signUpForm?.get('Fname')?.hasError('required')"> First name is
+                                    required.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Lname">
+                        <span>Last Name</span>
+                        <input formControlName="Lname">
+                        <div class="alert-msg">
+                            <div
+                                *ngIf="signUpForm.controls['Lname'].invalid && (signUpForm.controls['Lname'].dirty || signUpForm.controls['Lname'].touched)">
+                                <span *ngIf="signUpForm?.get('Lname')?.hasError('required')">Last Name is
+                                    required.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Email">
+                        <span>Email</span>
+                        <input formControlName="Email">
+                        <div class="alert-msg">
+                            <div
+                                *ngIf="signUpForm.controls['Email'].invalid && (signUpForm.controls['Email'].dirty || signUpForm.controls['Email'].touched)">
+                                <span *ngIf="signUpForm?.get('Email')?.hasError('required')"> Email is required.</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <button (click)="updateDetail()" class="common-button">
+            <span>Update</span>
+            <img src="../../../../../assets/icons/GoForwardIconWhite.svg" class="img-fluid">
+        </button>
+    </footer>
+</div>
+<div class="popup-container" [ngClass]="{'show-popup': isOpen}" (click)="closePopup()">
+    <div class="popup-content" (click)="stopPropagation($event)">
+        <div class="popup-inner">
+            <div class="popup-header">
+                <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M37.5 75C58.2107 75 75 58.2107 75 37.5C75 16.7893 58.2107 0 37.5 0C16.7893 0 0 16.7893 0 37.5C0 58.2107 16.7893 75 37.5 75Z"
+                        fill="#3A3B3B" />
+                    <rect opacity="0.01" x="18" y="18" width="40" height="40" fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M47.5 56H32.5C31.6716 56 31 55.3284 31 54.5C31 53.6716 31.6716 53 32.5 53H47.5C48.3284 53 49 52.3284 49 51.5V45.275C48.9245 44.4333 48.4197 43.6903 47.665 43.31C41.7856 40.9362 35.2144 40.9362 29.335 43.31C28.5803 43.6903 28.0755 44.4333 28 45.275V54.5C28 55.3284 27.3284 56 26.5 56C25.6716 56 25 55.3284 25 54.5V45.275C25.0663 43.2045 26.3145 41.3556 28.21 40.52C34.8107 37.8527 42.1893 37.8527 48.79 40.52C50.6855 41.3556 51.9337 43.2045 52 45.275V51.5C52 53.9853 49.9853 56 47.5 56ZM46 27.5C46 23.3579 42.6421 20 38.5 20C34.3579 20 31 23.3579 31 27.5C31 31.6421 34.3579 35 38.5 35C42.6421 35 46 31.6421 46 27.5ZM43 27.5C43 29.9853 40.9853 32 38.5 32C36.0147 32 34 29.9853 34 27.5C34 25.0147 36.0147 23 38.5 23C40.9853 23 43 25.0147 43 27.5Z"
+                        fill="white" />
+                </svg>
+                <div class="pop-up-title">
+                    <h6>Name and Email Updated</h6>
+                    <p>You have successfully updated your full name.</p>
+                </div>
+            </div>
+            <button (click)="closePopup()" class="common-button">
+                <span>Done</span>
+            </button>
+        </div>
+    </div>
+</div>

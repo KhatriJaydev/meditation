@@ -7,3 +7,10 @@
 //     justify-content: space-around;
 //     padding: 28px 0;
 // }
+.activeAddTab {
+    svg {
+        path {
+            fill: $charcoal-gray;
+        }
+    }
+}

@@ -7,9 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./tabs.component.scss'],
 })
 export class TabsComponent {
+  activeTab: string = 'home';
   constructor(private router: Router) {}
 
   goToSelectedItem(SelectedSection: string) {
+    this.activeTab = SelectedSection;
     if (SelectedSection === 'home') {
       this.router.navigate(['tabs', 'dashboard']);
     } else if (SelectedSection === 'explor') {
