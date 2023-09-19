@@ -8,26 +8,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./change-password.component.scss'],
 })
 export class ChangePasswordComponent {
-  isOpen: boolean = false;
-  show = false;
+  isPopUpOpen: boolean = false;
+  show: boolean = false;
+  
   password: string;
-
   passwordForm: FormGroup;
-
+  
+  oldPasswordModel: boolean = true;
+  createPasswordModel: boolean = false;
 
   constructor(private router: Router, private fb: FormBuilder) {
     this.password = 'password';
 
     this.passwordForm = this.fb.group({
-      password: ['password', Validators.required] // Initialize with 'password'
+      password: ['password', Validators.required],
     });
   }
-  stopPropagation(event: Event) {
-    event.stopPropagation();
-  }
-
-  continuePassword() {}
-
   showHidepass() {
     if (this.password === 'password') {
       this.password = 'text';
@@ -37,11 +33,23 @@ export class ChangePasswordComponent {
       this.show = false;
     }
   }
+
+  stopPropagation(event: Event) {
+    event.stopPropagation();
+  }
+
+  checkOldPassword() {
+    this.createPasswordModel = true;
+    this.oldPasswordModel = false;
+  }
+  updatePassword(){
+    this.isPopUpOpen = true;
+  }
   goBack() {
     this.router.navigate(['profile', 'settings']);
   }
 
   closePopup() {
-    this.isOpen = false;
+    this.isPopUpOpen = false;
   }
 }
